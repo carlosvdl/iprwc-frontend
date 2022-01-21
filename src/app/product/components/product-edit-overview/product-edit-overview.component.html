@@ -1,0 +1,25 @@
+<div class="product-edit-overview">
+
+  <nb-card>
+
+    <nb-card-header>
+
+      <span>Products</span>
+      <button nbButton (click)="openPostProductForm()">Add product</button>
+
+    </nb-card-header>
+
+    <nb-card-body>
+
+      <ngx-table [configuration]="configuration"
+                 [data]="products"
+                 [columns]="columns"
+                 (event)="eventEmitted($event)">
+      </ngx-table>
+
+    </nb-card-body>
+
+  </nb-card>
+
+</div>
+

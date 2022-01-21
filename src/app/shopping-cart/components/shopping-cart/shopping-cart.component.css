@@ -1,0 +1,93 @@
+.shopping-cart-container nb-card {
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  margin-top: 20px;
+  background-color: #F3E3BC;
+  border-radius: 10px;
+}
+
+.shopping-cart-container nb-card-body {
+  padding-top: 6px;
+}
+
+.shopping-cart-container nb-card-header {
+  border-bottom: 1px solid black;
+  font-size: 1.6rem;
+}
+
+.shopping-cart-container nb-list-item:first-child {
+  border-top: none;
+}
+
+.shopping-cart-container nb-card-footer {
+  border-top: 1px solid black;
+  text-align: right;
+}
+
+.shopping-cart-container nb-list-item {
+  border-bottom: none;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.shopping-cart-container img {
+  width: 20%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.shopping-cart-container button {
+  margin-top: 10px;
+}
+
+.shopping-cart-price {
+  font-weight: 800;
+  font-size: 1.7rem;
+  display: block;
+}
+
+.shopping-cart-price-title {
+  display: block;
+  margin-top: 10px;
+}
+
+::ng-deep .nb-theme-default [nbButton].appearance-filled.status-basic,
+::ng-deep .nb-theme-default [nbButton].appearance-filled.status-basic:focus {
+  background-color: #00ae6c;
+  color: #fff;
+  box-shadow: none;
+  border: none;
+}
+
+::ng-deep .nb-theme-default [nbButton].appearance-filled.status-basic:hover {
+  color: #fff;
+  box-shadow: none;
+  background-color: #008050;
+  border: none;
+}
+
+.shopping-cart-product-title {
+  margin-left: 20px;
+  font-size: 1.2rem;
+}
+
+.shopping-cart-product-price {
+  margin-top: 10px;
+  display: block;
+  margin-left: 20px;
+  font-weight: 800;
+  font-size: 1rem;
+  color: #ef5338;
+}
+
+.shopping-cart-container nb-icon {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.shopping-cart-container nb-card-header nb-icon {
+  float: right;
+  margin: 0;
+}

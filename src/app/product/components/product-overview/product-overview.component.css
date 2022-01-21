@@ -1,0 +1,50 @@
+.collection {
+  display: grid;
+  grid-auto-columns: max-content;
+  grid-auto-flow: dense;
+  grid-auto-rows: minmax(200px, auto);
+  grid-gap: 50px;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 25px 100px 25px 25px;
+}
+
+.collection nb-card {
+  background-color: transparent;
+}
+
+.collection nb-card-body {
+  padding: 0;
+  background-color: #F3E3BC;
+  border-radius: 10px;
+}
+
+.collection img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+}
+
+.product-title {
+  text-align: left;
+  margin-top: 5px;
+  margin-bottom: 0;
+  font-weight: 800;
+  margin-left: 10px;
+  display: block;
+  font-size: 1.1rem;
+}
+
+.product-title, .product-price {
+  font-family: Trebuchet MS, sans-serif;
+}
+
+.product-price {
+  color: #ef5338;
+  text-align: right;
+  margin-top: 0;
+  margin-bottom: 5px;
+  float: right;
+  margin-right: 10px;
+  font-weight: 800;
+  font-size: 1rem;
+}

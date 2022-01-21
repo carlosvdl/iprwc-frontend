@@ -1,0 +1,50 @@
+<div class="shopping-cart-container">
+
+  <nb-card size="large">
+
+    <nb-card-header>
+
+      <span>Shopping Cart</span>
+
+      <nb-icon icon="trash-2-outline" (click)="emptyShoppingCart()"></nb-icon>
+
+    </nb-card-header>
+
+    <nb-card-body>
+
+      <nb-list>
+
+        <nb-list-item *ngFor="let product of shoppingCart.products">
+
+          <img src="{{ product.image_url }}" alt="">
+
+          <div class="shopping-cart-product-details">
+
+            <span class="shopping-cart-product-title">{{ product.title }}</span>
+
+            <span class="shopping-cart-product-price">€ {{ product.price }}</span>
+
+            <nb-icon icon="trash-2-outline" (click)="deleteProductFromShoppingCart(product)"></nb-icon>
+
+          </div>
+
+        </nb-list-item>
+
+      </nb-list>
+
+    </nb-card-body>
+
+    <nb-card-footer>
+
+      <span class="shopping-cart-price">€ {{ calculateTotalPrice() }}</span>
+
+      <span class="shopping-cart-price-title">Shipping costs are calculated at payment</span>
+
+      <button nbButton (click)="routeToOrderPage()">Proceed to checkout</button>
+
+    </nb-card-footer>
+
+  </nb-card>
+
+</div>
+

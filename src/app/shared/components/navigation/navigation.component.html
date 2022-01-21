@@ -1,0 +1,13 @@
+<nb-actions size="medium">
+
+  <nb-action routerLink="/products" icon="grid-outline" routerLinkActive="active"></nb-action>
+
+  <nb-action routerLink="/shopping-cart" icon="shopping-cart-outline" routerLinkActive="active"></nb-action>
+
+  <nb-action routerLink="/profile" icon="person" routerLinkActive="active"></nb-action>
+
+  <nb-action *ngIf="jwtTokenService.isAdmin()" routerLink="/product-edit" icon="settings-outline" routerLinkActive="active"></nb-action>
+
+  <nb-action routerLink="/logout" icon="log-out" routerLinkActive="active"></nb-action>
+
+</nb-actions>

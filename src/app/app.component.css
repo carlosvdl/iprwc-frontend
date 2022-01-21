@@ -1,0 +1,24 @@
+::ng-deep .nb-theme-default nb-layout .layout .layout-container .content .columns nb-layout-column{
+  padding: 0 !important;
+  background-color: #ecede0;
+}
+
+nb-layout-header {
+  background-color: #55433B;
+}
+
+.store-title {
+  text-align: center;
+  font-weight: 800;
+  font-size: 2rem;
+  display: block;
+  color: #FFF0CA;
+}
+
+:host ::ng-deep .nb-theme-default nb-layout-header nav  {
+  display: block;
+}
+
+:host ::ng-deep nav {
+  display: block!important;
+}

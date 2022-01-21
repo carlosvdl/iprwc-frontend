@@ -1,0 +1,41 @@
+.product-edit-overview nb-card {
+  margin-left: auto;
+  margin-right: auto;
+  width: 88%;
+  margin-top: 25px;
+  background-color: #F3E3BC;
+  border-radius: 10px;
+}
+
+.product-edit-overview nb-card-header {
+  border-bottom: 1px solid black;
+  font-size: 1.8rem;
+}
+
+.product-edit-overview button {
+  float: right;
+}
+
+::ng-deep .nb-theme-default [nbButton].appearance-filled.status-basic,
+::ng-deep .nb-theme-default [nbButton].appearance-filled.status-basic:focus {
+  background-color: #00ae6c;
+  color: #fff;
+  box-shadow: none;
+  border: none;
+}
+
+::ng-deep .nb-theme-default [nbButton].appearance-filled.status-basic:hover {
+  color: #fff;
+  box-shadow: none;
+  background-color: #008050;
+  border: none;
+}
+
+::ng-deep .ngx-table__table--normal > tbody > tr > td,
+::ng-deep .ngx-table__table--normal > thead > tr > th {
+  border-bottom: 1px solid black;
+}
+
+::ng-deep tr:hover {
+  background-color: beige!important;
+}

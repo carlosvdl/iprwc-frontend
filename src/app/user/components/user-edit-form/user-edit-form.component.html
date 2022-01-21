@@ -1,0 +1,246 @@
+<div class="user-form-container">
+
+  <nb-card size="large">
+
+    <nb-card-header>
+
+      <span>Edit User Profile</span>
+
+    </nb-card-header>
+
+    <nb-card-body>
+
+      <form (ngSubmit)="onSubmit()" #form="ngForm">
+
+        <div class="form-control-group">
+          <label for="email">Email</label>
+          <input
+            [(ngModel)]="user.email"
+            #email="ngModel"
+            [status]="email.dirty ? (email.invalid  ? 'danger' : 'success') : 'basic'"
+            pattern=".+@.+..+"
+            id="email"
+            name="email"
+            type="email"
+            nbInput
+            placeholder="Email">
+          <ng-container *ngIf="email.invalid && email.touched">
+            <p class="caption status-danger" *ngIf="email.errors?.pattern">
+              Email should be the real one!
+            </p>
+          </ng-container>
+        </div>
+
+        <div class="form-control-group">
+          <label for="password">Password</label>
+          <input
+            [(ngModel)]="user.password"
+            #password="ngModel"
+            [status]="password.dirty ? (password.invalid  ? 'danger' : 'success') : 'basic'"
+            minlength="8"
+            maxlength="32"
+            id="password"
+            name="password"
+            type="password"
+            nbInput
+            placeholder="Password">
+          <ng-container *ngIf="password.invalid && password.touched">
+            <p class="caption status-danger" *ngIf="password.errors?.minlength || password.errors?.maxlength">
+              Password should contain from 8 to 32 characters
+            </p>
+          </ng-container>
+        </div>
+
+        <div class="form-control-group">
+          <label for="fullName">Full name</label>
+          <input
+            [(ngModel)]="user.full_name"
+            #fullName="ngModel"
+            [status]="fullName.dirty ? (fullName.invalid  ? 'danger' : 'success') : 'basic'"
+            minlength="5"
+            maxlength="32"
+            id="fullName"
+            name="fullName"
+            type="text"
+            nbInput
+            placeholder="Full name">
+          <ng-container *ngIf="fullName.invalid && fullName.touched">
+            <p class="caption status-danger" *ngIf="fullName.errors?.minlength || fullName.errors?.maxlength">
+              Full name should contain from 5 to 32 characters
+            </p>
+          </ng-container>
+        </div>
+
+        <div class="form-control-group">
+          <label for="phoneNumber">Phone number</label>
+          <input
+            [(ngModel)]="user.phone_number"
+            #phoneNumber="ngModel"
+            [status]="phoneNumber.dirty ? (phoneNumber.invalid  ? 'danger' : 'success') : 'basic'"
+            minlength="10"
+            maxlength="10"
+            id="phoneNumber"
+            name="phoneNumber"
+            type="tel"
+            nbInput
+            placeholder="Phone number">
+          <ng-container *ngIf="phoneNumber.invalid && phoneNumber.touched">
+            <p class="caption status-danger" *ngIf="phoneNumber.errors?.minlength || phoneNumber.errors?.maxlength">
+              Phone number should be exactly 10 characters
+            </p>
+          </ng-container>
+        </div>
+
+        <div class="row">
+          <label for="country">Country</label>
+          <input
+            [(ngModel)]="user.country"
+            #country="ngModel"
+            [status]="country.dirty ? (country.invalid  ? 'danger' : 'success') : 'basic'"
+            minlength="4"
+            maxlength="32"
+            id="country"
+            name="country"
+            type="text"
+            nbInput
+            placeholder="Country">
+          <ng-container *ngIf="country.invalid && country.touched">
+            <p class="caption status-danger" *ngIf="country.errors?.minlength || country.errors?.maxlength">
+              Country should contain from 5 to 32 characters
+            </p>
+          </ng-container>
+        </div>
+
+        <div class="form-control-group">
+          <label for="state">State</label>
+          <input
+            [(ngModel)]="user.state"
+            #state="ngModel"
+            [status]="state.dirty ? (state.invalid  ? 'danger' : 'success') : 'basic'"
+            minlength="4"
+            maxlength="32"
+            id="state"
+            name="state"
+            type="text"
+            nbInput
+            placeholder="State">
+          <ng-container *ngIf="state.invalid && state.touched">
+            <p class="caption status-danger" *ngIf="state.errors?.minlength || state.errors?.maxlength">
+              State should contain from 4 to 32 characters
+            </p>
+          </ng-container>
+        </div>
+
+        <div class="form-control-group">
+          <label for="zipCode">Zip code</label>
+          <input
+            [(ngModel)]="user.zip_code"
+            #zipCode="ngModel"
+            [status]="zipCode.dirty ? (zipCode.invalid  ? 'danger' : 'success') : 'basic'"
+            minlength="6"
+            maxlength="6"
+            id="zipCode"
+            name="zipCode"
+            type="text"
+            nbInput
+            placeholder="Zip code">
+          <ng-container *ngIf="zipCode.invalid && zipCode.touched">
+            <p class="caption status-danger" *ngIf="zipCode.errors?.minlength || zipCode.errors?.maxlength">
+              Zip Code should be exactly 6 characters
+            </p>
+          </ng-container>
+        </div>
+
+        <div class="form-control-group">
+          <label for="city">City</label>
+          <input
+            [(ngModel)]="user.city"
+            #city="ngModel"
+            [status]="city.dirty ? (city.invalid  ? 'danger' : 'success') : 'basic'"
+            minlength="3"
+            maxlength="32"
+            id="city"
+            name="city"
+            type="text"
+            nbInput
+            placeholder="City">
+          <ng-container *ngIf="city.invalid && city.touched">
+            <p class="caption status-danger" *ngIf="city.errors?.minlength || city.errors?.maxlength">
+              City should contain from 3 to 32 characters
+            </p>
+          </ng-container>
+        </div>
+
+        <div class="form-control-group">
+          <label for="street">Street</label>
+          <input
+            [(ngModel)]="user.street"
+            #street="ngModel"
+            [status]="street.dirty ? (street.invalid  ? 'danger' : 'success') : 'basic'"
+            minlength="6"
+            maxlength="32"
+            id="street"
+            name="street"
+            type="text"
+            nbInput
+            placeholder="Street">
+          <ng-container *ngIf="street.invalid && street.touched">
+            <p class="caption status-danger" *ngIf="street.errors?.minlength || street.errors?.maxlength">
+              Street should contain from 6 to 32 characters
+            </p>
+          </ng-container>
+        </div>
+
+        <div class="form-control-group">
+          <label for="houseNumber">House number</label>
+          <input
+            [(ngModel)]="user.house_number"
+            #houseNumber="ngModel"
+            [status]="houseNumber.dirty ? (houseNumber.invalid  ? 'danger' : 'success') : 'basic'"
+            minlength="1"
+            maxlength="5"
+            id="houseNumber"
+            name="houseNumber"
+            type="number"
+            nbInput
+            placeholder="House number">
+          <ng-container *ngIf="houseNumber.invalid && houseNumber.touched">
+            <p class="caption status-danger" *ngIf="houseNumber.errors?.minlength || houseNumber.errors?.maxlength">
+              House number should contain from 1 to 5 characters
+            </p>
+          </ng-container>
+        </div>
+
+        <div class="form-control-group">
+          <label for="houseNumberSuffix">House number suffix</label>
+          <input
+            [(ngModel)]="user.house_number_suffix"
+            #houseNumberSuffix="ngModel"
+            [status]="houseNumberSuffix.dirty ? (houseNumberSuffix.invalid  ? 'danger' : 'success') : 'basic'"
+            minlength="1"
+            maxlength="1"
+            id="houseNumberSuffix"
+            name="houseNumberSuffix"
+            type="text"
+            nbInput
+            placeholder="House number suffix">
+          <ng-container *ngIf="houseNumberSuffix.invalid && houseNumberSuffix.touched">
+            <p class="caption status-danger" *ngIf="houseNumberSuffix.errors?.minlength || houseNumberSuffix.errors?.maxlength">
+              House number suffix should be exactly 1 character
+            </p>
+          </ng-container>
+        </div>
+
+      </form>
+
+    </nb-card-body>
+
+    <nb-card-footer>
+
+      <button nbButton [disabled]="!form.valid" (click)="onSubmit()">Update Profile</button>
+
+    </nb-card-footer>
+
+  </nb-card>
+
+</div>

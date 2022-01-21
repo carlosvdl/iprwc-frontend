@@ -1,0 +1,115 @@
+<div class="product-edit-form-container">
+
+  <nb-card size="large">
+
+    <nb-card-header>
+
+      <span>Update product</span>
+
+    </nb-card-header>
+
+    <nb-card-body>
+
+      <form #form="ngForm">
+
+        <div class="form-control-group">
+          <label for="title">Title</label>
+          <input
+            [(ngModel)]="product.title"
+            #title="ngModel"
+            [status]="title.dirty ? (title.invalid  ? 'danger' : 'success') : 'basic'"
+            minlength="3"
+            maxlength="32"
+            id="title"
+            name="title"
+            type="text"
+            nbInput
+            placeholder="Title">
+          <ng-container *ngIf="title.invalid && title.touched">
+            <p class="caption status-danger" *ngIf="title.errors?.minlength || title.errors?.maxlength">
+              Title should contain from 3 to 32 characters
+            </p>
+          </ng-container>
+        </div>
+
+        <div class="form-control-group">
+          <label for="description">Description</label>
+          <textarea
+            [(ngModel)]="product.description"
+            #description="ngModel"
+            [status]="description.dirty ? (description.invalid  ? 'danger' : 'success') : 'basic'"
+            minlength="4"
+            maxlength="32"
+            id="description"
+            name="description"
+            type="text"
+            nbInput
+            placeholder="Description">
+          </textarea>
+          <ng-container *ngIf="description.invalid && description.touched">
+            <p class="text-area-caption status-danger" *ngIf="description.errors?.minlength || description.errors?.maxlength">
+              Description should contain from 4 to 32 characters
+            </p>
+          </ng-container>
+        </div>
+
+        <div class="form-control-group-image">
+          <label for="imageUrl">Image URL</label>
+          <input
+            [(ngModel)]="product.image_url"
+            #imageUrl="ngModel"
+            [status]="imageUrl.dirty ? (imageUrl.invalid  ? 'danger' : 'success') : 'basic'"
+            pattern="[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)"
+            id="imageUrl"
+            name="imageUrl"
+            type="text"
+            nbInput
+            placeholder="Image URL">
+          <ng-container *ngIf="imageUrl.invalid && imageUrl.touched">
+            <p class="caption status-danger" *ngIf="imageUrl.errors?.pattern">
+              Image URL should be the real one!
+            </p>
+          </ng-container>
+        </div>
+
+        <div class="form-control-group">
+          <label for="price">Price</label>
+          <input
+            [(ngModel)]="product.price"
+            #price="ngModel"
+            [status]="price.dirty ? (price.invalid  ? 'danger' : 'success') : 'basic'"
+            minlength="1"
+            id="price"
+            name="price"
+            type="number"
+            nbInput
+            placeholder="Price">
+          <ng-container *ngIf="price.invalid && price.touched">
+            <p class="caption status-danger" *ngIf="price.errors?.minlength">
+              Price should contain at least 1 character
+          </ng-container>
+        </div>
+
+      </form>
+
+      <div class="image-preview">
+
+        <img src="{{ product.image_url }}" alt="">
+
+      </div>
+
+    </nb-card-body>
+
+    <nb-card-footer>
+
+      <button nbButton [disabled]="!form.valid" (click)="updateProduct()">Update</button>
+
+      <nb-icon icon="trash-2-outline" (click)="deleteProduct()"></nb-icon>
+
+    </nb-card-footer>
+
+  </nb-card>
+
+</div>
+
+

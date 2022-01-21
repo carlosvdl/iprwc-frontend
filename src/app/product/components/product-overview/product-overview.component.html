@@ -1,0 +1,23 @@
+<div class="collection">
+
+  <nb-card *ngFor="let product of products" (click)="open(product)">
+
+    <nb-card-body>
+
+      <img src="{{ product.image_url }}" alt="">
+
+      <div class="product-details">
+
+        <span class="product-title">{{ product.title }}</span>
+
+        <span class="product-price">€ {{ product.price }}</span>
+
+      </div>
+
+    </nb-card-body>
+
+  </nb-card>
+
+</div>
+
+

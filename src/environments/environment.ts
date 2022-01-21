@@ -3,7 +3,45 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  APIEndpoint: 'http://localhost:8000/api/',
+  FrontEndRoutes: {
+    auth: {
+      login: 'login',
+      register: 'register',
+      logout: 'logout'
+    },
+    product: 'products',
+    shoppingCart: 'shopping-cart',
+    profile: 'profile',
+    productEdit: 'product-edit',
+    order: 'order'
+  },
+  APIRoutes: {
+    auth: {
+      login: 'auth/login',
+      register: 'auth/register',
+      logout: 'auth/logout',
+      refresh: 'auth/refresh',
+      user: 'auth/user'
+    },
+    product: {
+      getAll: 'product',
+      get: 'product/',
+      post: 'product',
+      put: 'product/',
+      delete: 'product/'
+    },
+    shoppingCart: {
+      get: 'shopping-cart',
+      addProduct: 'shopping-cart/add-product',
+      deleteProduct: 'shopping-cart/delete-product',
+      empty: 'shopping-cart/empty'
+    },
+    user: {
+      put: 'user'
+    }
+  }
 };
 
 /*

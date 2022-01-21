@@ -1,0 +1,97 @@
+.product-post-form-container nb-card {
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  margin-top: 25px;
+  background-color: #F3E3BC;
+  border-radius: 10px;
+}
+
+.product-post-form-container nb-card-body {
+  padding-top: 10px;
+}
+
+.product-post-form-container nb-card-header {
+  border-bottom: 1px solid black;
+  font-size: 1.6rem;
+}
+
+.product-post-form-container nb-card-footer {
+  border-top: 1px solid black;
+  text-align: right;
+  display: block;
+}
+
+.product-post-form-container p, .caption {
+  text-align: right;
+  padding: 0;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.product-post-form-container nb-icon {
+  margin-left: 10px;
+}
+
+.product-post-form-container label {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 8px 12px 12px 0;
+}
+
+.product-post-form-container input {
+  padding: 5px;
+  float: right;
+  width: 100%;
+  resize: vertical;
+}
+
+.product-post-form-container textarea {
+  padding: 5px;
+  float: right;
+  width: 100%;
+  height: 100px;
+  resize: vertical;
+}
+
+.product-post-form-container img {
+  width: 33%;
+  justify-content: center;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.text-area-caption {
+  text-align: left!important;
+  margin-top: 5px;
+  font-family: Open Sans, sans-serif;
+  font-size: .75rem;
+  font-weight: 400;
+  line-height: 1rem;
+  color: #ff3d71;
+}
+
+.form-control-group-image {
+  padding-top: 50px;
+  margin-top: 10px;
+}
+
+.image-preview {
+  text-align: center;
+}
+
+::ng-deep .nb-theme-default [nbButton].appearance-filled.status-basic,
+::ng-deep .nb-theme-default [nbButton].appearance-filled.status-basic:focus {
+  background-color: #00ae6c;
+  color: #fff;
+  box-shadow: none;
+  border: none;
+}
+
+::ng-deep .nb-theme-default [nbButton].appearance-filled.status-basic:hover {
+  color: #fff;
+  box-shadow: none;
+  background-color: #008050;
+  border: none;
+}
